@@ -16,26 +16,28 @@ class Solution {
         //     return false;
         // }
 
-        //through has Map
-        // Map<Character, Integer> m = new HashMap<>();
-        // Map<Character, Integer> m1 = new HashMap<>();
+        //through has Map best way if stirng includes all kinds of special,numeric and uppercase letters.
+        //Time Complexity: O(n)
+        //Space Complexity: O(k) where k is the number of distinct characters in the string.
+       // Map<Character, Integer> freq = new HashMap<>();
 
-        // for(char c: s.toCharArray()){
-        //    m.put(c, m.containsKey(c) ? m.get(c) +1 : 1);
-        // }
-        // System.out.println(m);
-        // for(char c: t.toCharArray()){
-        //     m1.put(c, m1.containsKey(c) ? m1.get(c) +1 : 1);
-        // }
-        // System.out.println(m1);
-        // for (Character a: m.keySet()){
-        //   if(!(m.get(a)).equals(m1.get(a))) {
-        //     return false;
-        //   }
-        // }
-        // return true;
+       //  for (int i = 0; i < s.length(); i++) {
+       //      char c1 = s.charAt(i);
+       //      char c2 = t.charAt(i);
+       //      freq.put(c1, freq.getOrDefault(c1, 0) + 1);
+       //      freq.put(c2, freq.getOrDefault(c2, 0) - 1);
+       //  }
 
-        // through array
+       //  for (int count : freq.values()) {
+       //      if (count != 0) {
+       //          return false;
+       //      }
+       //  }
+       //  return true;
+
+        // through array - best for in string includes only lower case letters
+        //Time Complexity: O(n)
+        //Space Complexity: O(1)
         int[] count = new int[26]; // intially will be placed with zero value at every index
 
         for (int i = 0; i < s.length(); i++) {
