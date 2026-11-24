@@ -22,7 +22,8 @@ class Solution {
 //             A[i][0] = nums[i];
 //             A[i][1] = i;
 //         }
-//         System.out.println(Arrays.deepToString(A));
+//         System.out.println(Arrays.deepToString(A));//deepToString work only for multidimensional array not for normall array, 
+                                                     //for normal array use Arrays.toString(pass array)
 //         //sort Array
 //         Arrays.sort(A, Comparator.comparingInt(a ->a[0]));
 //         System.out.println(Arrays.deepToString(A));
